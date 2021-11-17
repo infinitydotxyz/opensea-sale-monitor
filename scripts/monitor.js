@@ -1,6 +1,7 @@
 const { ethers } = require('ethers');
 const OpenSeaABI = require('../OpenSeaABI.json');
 const ERC721ABI = require('../erc721Abi.json');
+const ERC1155ABI = require('../erc1155Abi.json');
 const OPENSEA_ADDRESS = '0x7be8076f4ea4a4ad08075c2508e481d6c946d12b';
 const iface = new ethers.utils.Interface(OpenSeaABI);
 const provider = new ethers.providers.JsonRpcProvider(process.env.MAINNET_URL);
@@ -101,7 +102,7 @@ async function pruneERC1155(id, address, seller) {
     .limit(100)
     .get();
 
-  const contract = new ethers.Contract(address, ERC721ABI, provider);
+  const contract = new ethers.Contract(address, ERC1155ABI, provider);
   try {
     for (let i = 0; i < query.docs.length; i++) {
       const doc = query.docs[i];
