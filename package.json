@@ -1,5 +1,8 @@
 {
   "name": "nft-transfer-monitor",
+  "scripts": {
+    "start": "npx hardhat run ./scripts/monitor.js --network mainnet"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "firebase-admin": "^10.0.0"
