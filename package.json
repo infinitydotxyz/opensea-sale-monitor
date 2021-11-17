@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-project",
+  "name": "nft-transfer-monitor",
   "dependencies": {
     "dotenv": "^10.0.0"
   },
@@ -7,5 +7,12 @@
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "ethers": "^5.5.1",
     "hardhat": "^2.6.8"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "semi": true
   }
 }
