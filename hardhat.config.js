@@ -1,4 +1,3 @@
-require('@nomiclabs/hardhat-ethers');
 require('dotenv').config();
 
 // You need to export an object to set up your config

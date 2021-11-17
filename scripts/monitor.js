@@ -45,18 +45,12 @@ async function main() {
       }
 
       if (response.length > 4810) {
-        // console.log(
-        //   `{${event.transactionHash}} [${seller}] sold [${quantity}] of tokenID [${tokenId}] from ERC-1155 collection [${collectionAddress}] to [${buyer}]`
-        // );
         pruneERC1155(tokenId, collectionAddress, seller.trim().toLowerCase());
       } else {
-        // console.log(
-        //   `{${event.transactionHash}} [${seller}] sold tokenID [${tokenId}] from ERC-721 collection [${collectionAddress}] to [${buyer}]`
-        // );
         pruneERC721(tokenId, collectionAddress);
       }
     } catch (err) {
-      console.error(err);
+      console.error(err.message);
     }
   });
 }
